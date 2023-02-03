@@ -1,25 +1,67 @@
-<html>
-<body bgcolor=8888FF>
-<h2> Example1: A Simple Guestbook . . .</h2>
-<a href="guest.html">GO BACK</a>
-<h4>Click <a href="guest1.txt">Here</a> to view HTML code of this guestbook page</h4>
-
-<hr>
-<form method=post action="/cgi-bin/guestBook.pl">
-<input type=hidden name=fields value="Name,Email,Comments">
-Name: <input type=text name=Name><br>
-Email Address: <input type=text name=Email><br>
-Comments: <br><textarea name=Comments rows=5 cols=60>
-</textarea><br>
-<input type=submit value="Submit">
-</form>
-<hr noshade>
-
-<!--GUESTBOOK-OPTIONS: maxEntries=10-->
-<!--GUESTBOOK-->
-<!--GUESTBOOK-->
-
-<hr noshade>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic GuestBook By the Wheelchair Guy</title>
+    <style>
+    
+    input[type="text"], input[type="email"]  {
+       margin-left:60px;
+       display: block;
+         margin-top: -20px;
+ 
+    }
+    label{
+       
+ text-align: right;
+   
+    }
+    
+    
+    </style>
+</head>
+<body>
 
 </body>
 </html>
+ <form action='index.php' method='post'>
+<label> Name</label> <input type="text" name='name'><br>
+<label> E-mail </label> <input type="email" name='email'><br>
+<label>Message </label> <input type="text" name='msg'><br>
+<input type="submit" value="post">
+
+ </form>
+ <hr>
+ 
+
+<?php
+
+
+
+
+           if(isset($_POST['name'])) {
+                $fname = $_POST['name'];
+                $email = $_POST['email'];
+                $msg = $_POST['msg'];
+                
+                
+                     $file = fopen("comment.html","a");
+                     fwrite($file, "<b>First name </b>". $fname."<br>");
+                     fwrite($file, "<b>E-Mail</b> ".$email."<br>");
+                     fwrite($file, "<b>Message</b> ".$msg."<hr>");
+                     fclose($file);
+                    }
+
+
+            
+          
+
+               require("comment.html");
+?>
+
+
+
+    
+    
