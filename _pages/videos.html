@@ -1,0 +1,71 @@
+---
+layout: archive
+title: "Videos"
+permalink: /videos/
+author_profile: true
+---
+
+{% include base_path %}
+
+<p class="video-page__intro">
+  Research videos grouped by project context, from robot manipulation demos to talks and teaching material.
+</p>
+
+<nav class="video-category-nav" aria-label="Video categories">
+  {% for category in site.data.videos %}
+    <a href="#{{ category.slug }}">{{ category.title }}</a>
+  {% endfor %}
+</nav>
+
+{% for category in site.data.videos %}
+  <section class="video-category" id="{{ category.slug }}" aria-labelledby="{{ category.slug }}-title">
+    <h2 id="{{ category.slug }}-title">{{ category.title }}</h2>
+    {% if category.description %}
+      <p class="video-category__description">{{ category.description }}</p>
+    {% endif %}
+
+    {% if category.videos and category.videos.size > 0 %}
+      <div class="video-grid">
+        {% for video in category.videos %}
+          <article class="video-card">
+            {% if video.embed %}
+              <div class="video-card__media video-card__embed">
+                <iframe
+                  src="{{ video.embed }}"
+                  title="{{ video.title | escape }}"
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen></iframe>
+              </div>
+            {% elsif video.file %}
+              <video class="video-card__media" controls preload="metadata"{% if video.poster %} poster="{{ video.poster | relative_url }}"{% endif %}>
+                <source src="{{ video.file | relative_url }}"{% if video.type %} type="{{ video.type }}"{% endif %}>
+              </video>
+            {% elsif video.url %}
+              <a class="video-card__link-media" href="{{ video.url }}">
+                {% if video.poster %}
+                  <img class="video-card__media" src="{{ video.poster | relative_url }}" alt="">
+                {% else %}
+                  <span class="video-card__media video-card__fallback">Open video</span>
+                {% endif %}
+              </a>
+            {% endif %}
+
+            <div class="video-card__body">
+              <h3>{{ video.title }}</h3>
+              {% if video.year %}
+                <p class="video-card__meta">{{ video.year }}</p>
+              {% endif %}
+              {% if video.description %}
+                <p>{{ video.description }}</p>
+              {% endif %}
+              {% if video.url and video.file == nil and video.embed == nil %}
+                <a class="video-card__action" href="{{ video.url }}">Watch video</a>
+              {% endif %}
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </section>
+{% endfor %}

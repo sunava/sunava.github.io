@@ -1,0 +1,23 @@
+# Add video entries under the matching category.
+# Local uploads can live in /files/videos/ and use `file`.
+# You can also use `embed` for an iframe URL or `url` for an external video page.
+
+- title: "Robot Manipulation"
+  slug: "robot-manipulation"
+  description: "Task executions, generalized manipulation actions, and household robotics demonstrations."
+  videos: []
+
+- title: "Experiment Demos"
+  slug: "experiment-demos"
+  description: "Evaluation runs, system behavior, and research prototypes in action."
+  videos: []
+
+- title: "Talks and Presentations"
+  slug: "talks-presentations"
+  description: "Recorded talks, project presentations, and conference material."
+  videos: []
+
+- title: "Teaching and Outreach"
+  slug: "teaching-outreach"
+  description: "Teaching examples, workshop clips, and public-facing robotics videos."
+  videos: []

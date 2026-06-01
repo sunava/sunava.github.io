@@ -1,3 +1,60 @@
 <script src="{{ base_path }}/assets/js/main.min.js"></script>
+<script>
+  function copyAuthorValue(event, button) {
+    event.preventDefault();
+    event.stopPropagation();
+    if (event.stopImmediatePropagation) event.stopImmediatePropagation();
+
+    var value = button.getAttribute("data-copy");
+    var label = button.querySelector(".author__copy-hint");
+    var originalText = label ? label.textContent : button.textContent;
+
+    function showCopied() {
+      if (label) {
+        label.textContent = "Copied";
+      } else {
+        button.textContent = "Copied";
+      }
+      button.classList.add("is-copied");
+      window.setTimeout(function() {
+        if (label) {
+          label.textContent = originalText;
+        } else {
+          button.textContent = originalText;
+        }
+        button.classList.remove("is-copied");
+      }, 1400);
+    }
+
+    function copyFallback() {
+      var field = document.createElement("textarea");
+      field.value = value;
+      field.setAttribute("readonly", "");
+      field.style.position = "fixed";
+      field.style.top = "0";
+      field.style.left = "-9999px";
+      document.body.appendChild(field);
+      field.focus();
+      field.select();
+      document.execCommand("copy");
+      document.body.removeChild(field);
+      showCopied();
+    }
+
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(value).then(showCopied).catch(copyFallback);
+    } else {
+      copyFallback();
+    }
+
+    return false;
+  }
+
+  document.addEventListener("click", function(event) {
+    var button = event.target.closest("[data-copy]");
+    if (!button) return;
+    copyAuthorValue(event, button);
+  }, true);
+</script>
 
 {% include analytics.html %}
