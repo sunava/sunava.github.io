@@ -5,17 +5,33 @@
 - title: "Robot Manipulation"
   slug: "robot-manipulation"
   description: "Task executions, generalized manipulation actions, and household robotics demonstrations."
-  videos: []
+  videos:
+    - title: "Robot Cutting Example"
+      description: "PR2 performing a cutting task."
+      file: files/cuttin_real_logo.mp4
+      type: video/mp4
+    - title: "Robot FTS Cutting Example"
+      description: "PR2 performing a cutting task and fts recorded."
+      file: files/cutting_real_fts.mp4
+      type: video/mp4
 
 - title: "Experiment Demos"
   slug: "experiment-demos"
   description: "Evaluation runs, system behavior, and research prototypes in action."
-  videos: []
+  videos:
+    - title: "Robot Spreading Example"
+      description: "PR2 performing a spreading task."
+      file: files/spreading_on_bread_simulation.mp4
+      type: video/mp4
 
-- title: "Talks and Presentations"
-  slug: "talks-presentations"
-  description: "Recorded talks, project presentations, and conference material."
-  videos: []
+- title: "VRB"
+  slug: "vrb-demos"
+  description: "Video from our Virtual Research Building."
+  videos:
+    - title: "Robot Spreading Example"
+      description: "PR2 performing a spreading task."
+      file: files/pr2_cutting_vrb.mp4
+      type: video/mp4
 
 - title: "Teaching and Outreach"
   slug: "teaching-outreach"
