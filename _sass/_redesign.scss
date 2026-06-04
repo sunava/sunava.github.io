@@ -222,6 +222,42 @@ a:hover {
   text-decoration: none;
 }
 
+.page__content figure.suturo-gallery {
+  gap: 0.9rem;
+}
+
+.page__content figure.suturo-gallery > a {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--surface);
+  box-shadow: 0 12px 32px rgba(24, 36, 34, 0.12);
+}
+
+.page__content figure.suturo-gallery > a:hover {
+  box-shadow: 0 16px 38px rgba(24, 36, 34, 0.18);
+}
+
+.page__content figure.suturo-gallery img {
+  display: block;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.page__content figure.suturo-gallery figcaption {
+  width: 100%;
+}
+
+@media (min-width: 37.5em) {
+  .page__content figure.suturo-gallery.third > a {
+    width: calc(50% - 0.45rem);
+  }
+
+  .page__content figure.suturo-gallery.third > a:first-child {
+    width: 100%;
+  }
+}
+
 .author__urls .author__copy-item {
   display: block;
   width: 100%;

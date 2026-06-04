@@ -8,8 +8,8 @@ redirect_from:
 ---
 
 <section class="home-grid" aria-label="Site sections">
-  <a class="home-card" href="/portfolio/phd-thesis/">
-    <span class="home-card__label">Portfolio</span>
+  <a class="home-card" href="/projects/phd-thesis/">
+    <span class="home-card__label">Projects</span>
     <strong>PhD thesis</strong>
     <span>Generalized, context-aware robot manipulation actions.</span>
   </a>

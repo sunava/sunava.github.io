@@ -2,7 +2,7 @@
 title: "PhD Thesis"
 excerpt: "Research on generalized, context-aware robot manipulation actions for household tasks."
 collection: portfolio
-permalink: /portfolio/phd-thesis/
+permalink: /projects/phd-thesis/
 ---
 
 My PhD work focuses on generalized, context-aware actions for autonomous robots in real-world household environments. The research centers on actions such as cutting, pouring, transporting, and mixing, where robots must adapt to changing scenes, task context, and domain knowledge.
