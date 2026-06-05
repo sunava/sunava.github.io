@@ -20,7 +20,14 @@ gallery:
     url: suturo/RoboCup23-Home-All-participants.jpg
     alt: "RoboCup @Home 2023"
     title: "All the robots -> Worlds 2023"
-
+  - image_path: suturo/me-with-toya-arena.png
+    url: suturo/me-with-toya-arena.png
+    alt: "RoboCup @Home 2024"
+    title: "Eindhoven Arena"
+  - image_path: suturo/me-with-toya.jpg
+    url: suturo/me-with-toya.jpg
+    alt: "RoboCup @Home 2024"
+    title: "Eindhoven"
 ---
 
 Suturo is a student robotics project focused on bringing AI methods into practical robot behavior. The work connects robot control, perception, task planning, and real-world service robotics scenarios, with a strong link to RoboCup@Home-style challenges.

@@ -6,34 +6,43 @@
   slug: "robot-manipulation"
   description: "Task executions, generalized manipulation actions, and household robotics demonstrations."
   videos:
-    - title: "Robot Cutting Example"
-      description: "PR2 performing a cutting task."
-      file: files/cuttin_real_logo.mp4
+    - title: "PR2 Cutting Bread"
+      file: files/pr2_real_cutting_bread.mp4
       type: video/mp4
-    - title: "Robot FTS Cutting Example"
-      description: "PR2 performing a cutting task and fts recorded."
-      file: files/cutting_real_fts.mp4
+    - title: "PR2 Cutting Cucumber"
+      file: files/pr2_real_cutting_cucumber.mp4
       type: video/mp4
+    - title: "PR2 Cutting Zucchini"
+      file: files/pr2_real_cutting_zucchini.mp4
+      type: video/mp4
+
 
 - title: "Experiment Demos"
   slug: "experiment-demos"
   description: "Evaluation runs, system behavior, and research prototypes in action."
   videos:
-    - title: "Robot Spreading Example"
-      description: "PR2 performing a spreading task."
-      file: files/spreading_on_bread_simulation.mp4
+    - title: "PR2 Cutting Task: Robot View"
+      file: files/pr2_real_cutting_robot_view.mp4
+      type: video/mp4
+    - title: "PR2 Cutting Task: Force-Torque Sensor Data"
+      file: files/pr2_real_cutting_force_torque.mp4
       type: video/mp4
 
-- title: "VRB"
-  slug: "vrb-demos"
-  description: "Video from our Virtual Research Building."
+- title: "Simulation"
+  slug: "simulation"
+  description: "Video from the Semantic Digital Twin."
   videos:
-    - title: "Robot Spreading Example"
-      description: "PR2 performing a spreading task."
-      file: files/pr2_cutting_vrb.mp4
+    - title: "PR2 Spreading Bread in Simulation"
+      file: files/pr2_simulation_spreading_bread_simulation.mp4
+      type: video/mp4
+    - title: "Garmi Cutting Bread in Simulation"
+      file: files/garmi_simulation_cutting_bread.mp4
       type: video/mp4
 
 - title: "Teaching and Outreach"
   slug: "teaching-outreach"
   description: "Teaching examples, workshop clips, and public-facing robotics videos."
-  videos: []
+  videos:
+    - title: "PR2 Cutting Task in the Virtual Research Building"
+      file: files/pr2_vrb_cutting.mp4
+      type: video/mp4

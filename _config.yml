@@ -21,7 +21,7 @@ repository               : "sunava/sunava.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "hassouna_croped.jpg"
   name             : "Vanessa Hassouna"
   pronouns         : # example: "she/her"  
   bio              : "Research staff working on robotics, AI, and autonomous household manipulation."
